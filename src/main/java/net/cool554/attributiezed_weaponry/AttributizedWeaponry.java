@@ -1,6 +1,8 @@
 package net.cool554.attributiezed_weaponry;
 
 import com.mojang.logging.LogUtils;
+import net.cool554.attributiezed_weaponry.block.ModBlocks;
+import net.cool554.attributiezed_weaponry.item.ModCreativeModeTabs;
 import net.cool554.attributiezed_weaponry.item.Moditems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,8 +29,10 @@ public class AttributizedWeaponry
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        Moditems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
+        Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -48,16 +52,8 @@ public class AttributizedWeaponry
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(Moditems.COPPER_COIN);
-            event.accept(Moditems.IRON_COIN);
-            event.accept(Moditems.GOLD_COIN);
-            event.accept(Moditems.DIAMOND_COIN);
-            event.accept(Moditems.EMERALD_COIN);
-            event.accept(Moditems.NETHERITE_COIN);
-        }
-    }
+
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
