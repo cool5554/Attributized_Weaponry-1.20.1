@@ -1,6 +1,7 @@
 package net.cool554.attributiezed_weaponry.item;
 
 import net.cool554.attributiezed_weaponry.AttributizedWeaponry;
+import net.cool554.attributiezed_weaponry.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,6 +25,16 @@ public class ModCreativeModeTabs {
                         output.accept(Moditems.NETHERITE_COIN.get());
                         output.accept(Moditems.EMERALD_COIN.get());
                         output.accept(Moditems.GOLD_COIN.get());
+
+
+                    }))
+                    .build());
+    public static final RegistryObject<CreativeModeTab> LORE_ITEMS_TAB = CREATIVE_MODE_TABS.register("lore_items_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Moditems.DIAMOND_COIN.get()))
+                    .title(Component.translatable("creativetab.lore_items_tab"))
+                    .displayItems(((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.FAE_CORE.get());
+
 
 
                     }))

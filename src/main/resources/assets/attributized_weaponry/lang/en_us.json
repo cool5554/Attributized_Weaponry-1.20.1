@@ -6,9 +6,9 @@
   "item.attributized_weaponry.emerald_coin": "Emerald Coin",
   "item.attributized_weaponry.netherite_coin": "Netherite Coin",
 
+  "block.attributized_weaponry.fae_core": "Fae Core",
 
 
-
-  "creativetab.currency_tab":"Currency"
-
+  "creativetab.currency_tab":"Currency",
+  "creativetab.lore_items_tab":"Lore Items"
 }

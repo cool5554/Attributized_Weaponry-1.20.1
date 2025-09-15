@@ -1,7 +1,7 @@
 package net.cool554.attributiezed_weaponry;
 
 import com.mojang.logging.LogUtils;
-//import net.cool554.attributiezed_weaponry.block.ModBlocks;
+import net.cool554.attributiezed_weaponry.block.ModBlocks;
 import net.cool554.attributiezed_weaponry.item.ModCreativeModeTabs;
 import net.cool554.attributiezed_weaponry.item.Moditems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,7 +32,7 @@ public class AttributizedWeaponry
         ModCreativeModeTabs.register(modEventBus);
 
         Moditems.register(modEventBus);
-        //ModBlocks.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 

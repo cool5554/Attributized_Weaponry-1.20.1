@@ -1,4 +1,4 @@
-/* package net.cool554.attributiezed_weaponry.block;
+package net.cool554.attributiezed_weaponry.block;
 
 import net.cool554.attributiezed_weaponry.AttributizedWeaponry;
 import net.cool554.attributiezed_weaponry.item.Moditems;
@@ -6,6 +6,9 @@ import net.minecraft.ResourceLocationException;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,9 +20,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AttributizedWeaponry.MODID);
 
-    public static final  RegistryObject<Block>
-
-
+    public static final RegistryObject<Block> FAE_CORE = registerBlock("fae_core",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CONDUIT).sound(SoundType.WOOD)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -35,4 +37,4 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
-}*/
+}
