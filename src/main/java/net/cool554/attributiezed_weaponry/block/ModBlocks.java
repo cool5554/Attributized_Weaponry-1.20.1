@@ -1,4 +1,4 @@
-package net.cool554.attributiezed_weaponry.block;
+/* package net.cool554.attributiezed_weaponry.block;
 
 import net.cool554.attributiezed_weaponry.AttributizedWeaponry;
 import net.cool554.attributiezed_weaponry.item.Moditems;
@@ -35,4 +35,4 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
-}
+}*/
